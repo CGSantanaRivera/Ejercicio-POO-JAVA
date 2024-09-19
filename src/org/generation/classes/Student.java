@@ -55,7 +55,7 @@ public class Student {
     		 System.out.println("Felicitaciones, paseste al siguiente grado");
     	 }else {
     		 System.out.println("Reprobaste el año, pasa a control escolar");
-    	 }
+    	 }//changeYearIfApproved
          
      }//changeYearIfApproved
 }//class Student
