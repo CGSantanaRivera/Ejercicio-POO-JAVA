@@ -32,19 +32,31 @@ public class Student {
 				+ ", " + this.registration + ", " + this.grade + ", " + this.year;
 	}//toString para Students (lo implemente para que fuera mas facil saber la inf. de un estudiante)
     
-    public void printFullName(){
+    public String printFullName(){
         //TODO implement
+    	return "Nombre completo del alumno: " + this.firstName + " " + this.lastName;
      }//printFullName
 
-     public int isApproved(){
+     public boolean isApproved(){
          //TODO implement: should return true if grade >= 60
-    	 return 0;
+    	 if (grade >=60) {
+    		 return true;
+    	 }else {
+    		 return false;
+    	 }
+    	 
      }//isApproved
 
-     public int changeYearIfApproved(){
+     public void changeYearIfApproved(){
          //TODO implement: the student should advance to the next year if he/she grade is >= 60
          // Make year = year + 1, and print "Congragulations" if the student has been approved
-         return 0;
+    	 if (isApproved()) {
+    		 this.year=year+1;
+    		 System.out.println("Felicitaciones, paseste al siguiente grado");
+    	 }else {
+    		 System.out.println("Reprobaste el año, pasa a control escolar");
+    	 }
+         
      }//changeYearIfApproved
 }//class Student
 
